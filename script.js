@@ -83,16 +83,50 @@ if(fileInput) {
 // --- SCROLL SUAVE PARA NAVEGACIÓN ---
 document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        // Ignorar si tiene onclick propio (como el botón Contacto) o href sin ancla real
+        if (!href || href === '#' || this.getAttribute('onclick')) return;
+        
         e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
+        const targetElement = document.querySelector(href);
         
         if(targetElement) {
             window.scrollTo({
-                top: targetElement.offsetTop - 80, 
+                top: targetElement.offsetTop - 80,
                 behavior: 'smooth'
             });
         }
+    });
+});
+
+// --- LIGHTBOX DE GALERÍA ---
+function openLightbox(src, caption) {
+    let lb = document.getElementById('lightbox');
+    if(!lb) {
+        lb = document.createElement('div');
+        lb.id = 'lightbox';
+        lb.className = 'lightbox';
+        lb.innerHTML = `<span class="lightbox-close" onclick="closeLightbox()">&times;</span><img id="lbImg" src="" alt=""><p id="lbCaption" style="color:#ccc; font-size:0.9rem;"></p>`;
+        lb.addEventListener('click', function(e){ if(e.target === lb) closeLightbox(); });
+        document.body.appendChild(lb);
+    }
+    document.getElementById('lbImg').src = src;
+    document.getElementById('lbCaption').innerText = caption || '';
+    lb.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    const lb = document.getElementById('lightbox');
+    if(lb) { lb.classList.remove('active'); document.body.style.overflow = 'auto'; }
+}
+
+// Activar lightbox en tarjetas de galería que tengan imagen real
+document.querySelectorAll('.gallery-card').forEach(card => {
+    card.addEventListener('click', function() {
+        const img = this.querySelector('.gallery-img');
+        const caption = this.querySelector('.gallery-caption')?.innerText || '';
+        if(img) openLightbox(img.src, caption);
     });
 });
 

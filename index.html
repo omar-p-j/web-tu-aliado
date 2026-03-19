@@ -29,7 +29,7 @@
             <a href="https://t.me/Omar61025"><i class="fab fa-telegram"></i> Telegram</a>
         </div>
         <div class="social-info">
-            <a href="https://instagram.com/TuAliadoenCasa" target="_blank"><i class="fab fa-instagram"></i> @TuAliadoenCasa</a>
+            <a href="https://instagram.com/Tu_Aliado_en_Casa" target="_blank"><i class="fab fa-instagram"></i> @Tu_Aliado_en_Casa</a>
         </div>
     </div>
 
@@ -53,8 +53,9 @@
         <nav>
             <a href="#servicios">Servicios</a>
             <a href="#precios">Precios</a>
-            <a href="#contacto">Contacto</a>
+            <a href="#galeria">Galería</a>
             <a href="#faq">FAQ</a>
+            <a href="#" onclick="openModal('Contacto General'); return false;" style="color: var(--primary); font-weight:700;">Contacto</a>
         </nav>
     </header>
 
@@ -137,6 +138,9 @@
                 <div class="badge">Especial</div>
                 <i class="fas fa-car-rear"></i>
                 <h3>Pulido de faros</h3>
+                <span style="display:inline-block; margin-bottom:8px; background:rgba(255,140,0,0.15); border:1px solid var(--primary); border-radius:20px; padding:3px 10px; font-size:0.72rem; color:var(--primary); font-weight:600;">
+                    ★ Servicio a domicilio
+                </span>
                 <p>Recupera la luz y transparencia de tu coche. ¡Como nuevo!</p>
                 <span class="fake-link">Solicitar Presupuesto (Opc. Fotos) &rarr;</span>
             </div>
@@ -194,6 +198,46 @@
                 <div class="faq-answer">Puedes enviarnos las fotos y tu idea directamente tocando el botón de WhatsApp o rellenando nuestro formulario de presupuesto. Las fotos nos ayudan a darte un coste y tiempo estimado sin necesidad de ir a verlo antes.</div>
             </div>
         </div>
+    </section>
+
+    <!-- ===== SECCIÓN GALERÍA DE TRABAJOS ===== -->
+    <section class="services" id="galeria" style="margin-top: 50px;">
+        <div class="section-title">
+            <h2>Galería de <span>Trabajos</span></h2>
+            <p>Algunos de nuestros trabajos realizados en Logroño y alrededores</p>
+        </div>
+
+        <!-- ======================================================= -->
+        <!-- WIDGET DE INSTAGRAM - PASOS PARA ACTIVARLO:             -->
+        <!-- 1. Ve a https://snapwidget.com y haz clic en "Get Started Free" -->
+        <!-- 2. Conecta tu cuenta de Instagram @Tu_Aliado_en_Casa    -->
+        <!-- 3. Elige tipo "Instagram" y copia el código que te den  -->
+        <!-- 4. Pega aquí ese código sustituyendo el script de abajo -->
+        <!-- ======================================================= -->
+
+        <!-- PLACEHOLDER visible mientras no hay widget activo -->
+        <div id="ig-placeholder" style="width:100%; display:flex; flex-direction:column; align-items:center; gap:20px; padding:40px 20px; border:1px dashed rgba(255,140,0,0.3); border-radius:16px; text-align:center; color:var(--gray);">
+            <i class="fab fa-instagram" style="font-size:4rem; color:var(--primary);"></i>
+            <h3 style="color:white;">Galería conectada a Instagram</h3>
+            <p style="max-width:500px;">En cuanto publiques tu primera foto en <strong style="color:var(--primary);">@Tu_Aliado_en_Casa</strong> y actives el widget (ver pasos en el código), aparecerá aquí automáticamente.</p>
+            <a href="https://instagram.com/Tu_Aliado_en_Casa" target="_blank" class="btn btn-primary" style="font-size:0.85rem;">
+                <i class="fab fa-instagram"></i> Ver Instagram
+            </a>
+        </div>
+
+        <!-- PEGA AQUÍ EL CÓDIGO DE SNAPWIDGET CUANDO LO TENGAS -->
+        <!-- Ejemplo de cómo quedará:
+        <script src="https://snapwidget.com/js/snapwidget.js"></script>
+        <iframe src="https://snapwidget.com/embed/TU_CODIGO" class="snapwidget-widget"
+            allowtransparency="true" frameborder="0" scrolling="no"
+            style="border:none; overflow:hidden; width:100%;"></iframe>
+        -->
+
+        <p style="text-align:center; margin-top:30px; color: var(--gray); font-size:0.85rem;">
+            <i class="fas fa-info-circle" style="color:var(--primary);"></i> 
+            ¿Quieres que hagamos algo así para ti? 
+            <a href="#" onclick="openModal('Contacto General'); return false;" style="color:var(--primary); font-weight:700;">Solicita presupuesto gratis →</a>
+        </p>
     </section>
 
     <!-- Modal Formulario Inteligente (Configurado para FORMSPREE) -->
