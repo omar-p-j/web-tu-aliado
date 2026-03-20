@@ -248,8 +248,7 @@
             <p id="modalSubtitle" style="color: var(--gray); font-size: 0.9rem; margin-top: 5px;">Déjanos tus datos y te contactamos</p>
             
             <!-- Formulario enviado a omar@tualiadoencasaweb.com via Formspree -->
-            <!-- IMPORTANTE: Cuando tengas tu ID de Formspree, reemplaza la acción por: https://formspree.io/f/TU_ID -->
-            <form id="contactForm" action="https://formspree.io/f/xqeyjwwj" method="POST" enctype="multipart/form-data">
+            <form id="contactForm" action="https://formspree.io/f/xqeyjwwj" method="POST">
                 <input type="hidden" id="serviceType" name="Servicio Solicitado">
                 
                 <div class="form-group">
@@ -269,13 +268,13 @@
                     <textarea rows="3" name="Descripción" maxlength="300" placeholder="¿Qué necesitas que hagamos?"></textarea>
                 </div>
                 <div class="form-group">
-                    <label>Subir imágenes <strong>(Opcional*)</strong></label>
-                    <div class="upload-area" onclick="document.getElementById('fileInput').click()">
-                        <i class="fas fa-camera" style="font-size: 1.5rem; margin-bottom: 10px; color: var(--primary);"></i>
-                        <p style="font-size: 0.8rem;">Haz clic para seleccionar fotos de la avería/reforma</p>
-                        <input type="file" name="attachment" multiple style="display:none" id="fileInput">
+                    <div style="background: rgba(37,211,102,0.08); border: 1px solid rgba(37,211,102,0.35); border-radius: 12px; padding: 14px 16px; display:flex; align-items:center; gap:12px;">
+                        <i class="fab fa-whatsapp" style="font-size:2rem; color:#25d366; flex-shrink:0;"></i>
+                        <div>
+                            <p style="margin:0; font-size:0.85rem; font-weight:600; color:white;">¿Tienes fotos del trabajo?</p>
+                            <p style="margin:4px 0 0; font-size:0.78rem; color:#aaa;">Envíalas por WhatsApp junto con tu mensaje para un presupuesto más exacto.</p>
+                        </div>
                     </div>
-                    <p style="font-size: 0.7rem; color: #888; margin-top: 5px;">*Nota: Para adjuntar fotos gratis recomendamos usar nuestro WhatsApp directamente.</p>
                 </div>
 
                 <div style="display:flex; flex-direction:column; gap:10px; margin-top:10px;">
